@@ -31,7 +31,7 @@ const parentBoxes = document.querySelector('#boxes');
 const createBoxes = (amount) => {
   amount = input.value;
   let elSizeDefault = 30;
-  const parDiv = [];
+  const arrayElements = [];
   
   for (let i = 0; i < amount; i += 1) {
     const div = document.createElement("div");
@@ -39,9 +39,9 @@ const createBoxes = (amount) => {
     div.style.width = `${changeSize}px`;
     div.style.height = `${changeSize}px`;
     div.style.backgroundColor = getRandomHexColor();
-    parDiv.push(div)
+    arrayElements.push(div)
   }
-  return parentBoxes.append(...parDiv)  
+  return parentBoxes.append(...arrayElements)  
 };
 
 const destroyBoxes = () => {
