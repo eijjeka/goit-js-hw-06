@@ -19,8 +19,8 @@ function onFormSubmit(event) {
     const mail = formElements.email.value;
     const password = formElements.password.value;
 
-    if (mail == 0 || password == 0) {
-        alert('Заполните все поля перед отправкой')
+    if (mail == false || password == false) {
+       return alert('Заполните все поля перед отправкой')
     }
 
     const formData = {
