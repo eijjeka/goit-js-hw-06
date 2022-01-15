@@ -31,3 +31,7 @@ button {
 .gallery li img {
   width: 100%;
 }
+
+.mix-blend-mode {
+  mix-blend-mode: difference;
+}

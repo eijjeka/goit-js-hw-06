@@ -10,19 +10,19 @@ const refs = {
     form: document.querySelector('.login-form'),
 }
 
-refs.form.addEventListener('submit', onFormSubmit);
-
 function onFormSubmit(event) {
     event.preventDefault();
-
+    
     const formElements = event.currentTarget.elements;
+    console.log(formElements)
     const mail = formElements.email.value;
+
     const password = formElements.password.value;
-
-    if (mail === '' || password === '') {
-       return alert('Заполните все поля перед отправкой')
+    
+    if (mail === '' || password === '') { 
+        alert('Заполните все поля перед отправкой')
     }
-
+    
     const formData = {
         mail,
         password,
@@ -30,3 +30,5 @@ function onFormSubmit(event) {
     console.log(formData)
     refs.form.reset();
 }
+
+refs.form.addEventListener('submit', onFormSubmit);

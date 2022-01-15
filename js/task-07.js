@@ -12,6 +12,5 @@ const refs = {
 refs.input.addEventListener('input', onControlInput);
 
 function onControlInput (event) {
-    const inputValue = event.currentTarget.value;
-    refs.span.style.fontSize = `${inputValue}px`;
+    refs.span.style.fontSize = `${event.target.value}px`;
 }
