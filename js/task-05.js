@@ -5,8 +5,8 @@ const refs = {
     span: document.querySelector('#name-output')
 }
 
-refs.input.addEventListener('input', onChangeInput);
-
 function onChangeInput(event) {
-    refs.span.textContent = event.currentTarget.value
+    refs.input.value === '' ? refs.span.textContent = 'Anonymous' : refs.span.textContent = event.currentTarget.value;
 }
+
+refs.input.addEventListener('input', onChangeInput);
